@@ -1,0 +1,57 @@
+application:
+  id: autorescue
+  version: 1.0.0
+  defaultLanguage: ca_ES
+  domain: http://localhost:5173
+  domainCookie: localhost
+  securityFlag: false
+
+server:
+  port: 8084
+  servlet.context-path: /api
+  tomcat.accesslog.enabled: true
+  
+springdoc:
+   swagger-ui:
+      use-root-path: true
+
+logging:
+   level:
+      root: warn
+   org:
+      springframework:
+         web: debug
+      hibernate: error
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/autorescue_bd?currentSchema=autorescue
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  jackson:
+    time-zone: Europe/Madrid
+  main:
+    allow-bean-definition-overriding: true
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: [ "health","prometheus", "metrics" ]
+  endpoint:
+    health:
+       probes:
+            enabled: true
+       show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    tracing:
+      sampling:
+        probability: 1.0
