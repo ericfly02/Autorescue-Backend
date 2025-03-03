@@ -4,9 +4,16 @@
  */
 package autorescue.service;
 
-import autorescue.dto.AutorescueDTO;
+import org.springframework.http.ResponseEntity;
+
+import autorescue.dto.SendFormRequest;
+import autorescue.dto.SendNotificationRequest;
 
 public interface AutorescueService {
 
-	AutorescueDTO getAutorescue(Long id);
+	void sendNotification(SendNotificationRequest request);
+
+	void needHelp(SendNotificationRequest request) throws Exception;
+
+	ResponseEntity<Object> sendForm(SendFormRequest request) throws Exception;
 }
