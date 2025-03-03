@@ -2,7 +2,7 @@
  * Project AUTORESCUE
 
  */
-package cat.gencat.autorescue.constants;
+package autorescue.constants;
 
 public class Constants {
 	

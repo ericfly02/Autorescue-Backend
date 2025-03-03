@@ -5,7 +5,7 @@
 
 	<persistence-unit name="canigo"
 		transaction-type="RESOURCE_LOCAL">
-        <class>cat.gencat.hesbst.base.productEntity.model.entity.Product</class>
+        <class>hesbst.base.productEntity.model.entity.Product</class>
 	</persistence-unit>
 
 </persistence>

@@ -2,9 +2,9 @@
  * Project: AUTORESCUE
 
  */
-package cat.gencat.autorescue.service;
+package autorescue.service;
 
-import cat.gencat.autorescue.dto.AutorescueDTO;
+import autorescue.dto.AutorescueDTO;
 
 public interface AutorescueService {
 

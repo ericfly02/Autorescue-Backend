@@ -2,15 +2,15 @@
  * Project: AUTORESCUE
 
  */
-package cat.gencat.autorescue.endpoints;
+package autorescue.endpoints;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cat.gencat.autorescue.dto.AutorescueDTO;
-import cat.gencat.autorescue.service.AutorescueService;
+import autorescue.dto.AutorescueDTO;
+import autorescue.service.AutorescueService;
 import lombok.RequiredArgsConstructor;
 
 @RestController

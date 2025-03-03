@@ -4,7 +4,7 @@ Project: AUTORESCUE
 Copyright (c) nttdata 2024 
 
 */
-package cat.gencat.autorescue.dto;
+package autorescue.dto;
 
 import java.io.Serializable;
 

@@ -4,7 +4,7 @@ Project: AUTORESCUE
 Copyright (c) nttdata 2024 
 
 */
-package cat.gencat.autorescue;
+package autorescue;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -12,9 +12,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-import cat.gencat.autorescue.config.YamlPropertiesApplicationContextInitializer;
+import autorescue.config.YamlPropertiesApplicationContextInitializer;
 
-@SpringBootApplication(scanBasePackages = "cat.gencat.autorescue")
+@SpringBootApplication(scanBasePackages = "autorescue")
 @EnableFeignClients
 @EnableScheduling
 public class Application extends SpringBootServletInitializer {

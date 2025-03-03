@@ -2,16 +2,16 @@
  * Project: AUTORESCUE
 
  */
-package cat.gencat.autorescue.service.impl;
+package autorescue.service.impl;
 
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import cat.gencat.autorescue.dto.AutorescueDTO;
-import cat.gencat.autorescue.model.Autorescue;
-import cat.gencat.autorescue.repository.AutorescueRepository;
-import cat.gencat.autorescue.service.AutorescueService;
+import autorescue.dto.AutorescueDTO;
+import autorescue.model.Autorescue;
+import autorescue.repository.AutorescueRepository;
+import autorescue.service.AutorescueService;
 import lombok.RequiredArgsConstructor;
 
 @Service("AutorescueService")

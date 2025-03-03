@@ -2,7 +2,7 @@
  * Project: AUTORESCUE
 
  */
-package cat.gencat.autorescue.model;
+package autorescue.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

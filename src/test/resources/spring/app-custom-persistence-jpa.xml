@@ -16,7 +16,7 @@
     	   http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 	<aop:aspectj-autoproxy />
 	
-	<jpa:repositories base-package="cat.gencat.autorescue.repository"/>
+	<jpa:repositories base-package="autorescue.repository"/>
 	
 	<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 		<description>

@@ -4,7 +4,7 @@ Project: AUTORESCUE
 Copyright (c) nttdata 2024 
 
 */
-package cat.gencat.autorescue.config;
+package autorescue.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
