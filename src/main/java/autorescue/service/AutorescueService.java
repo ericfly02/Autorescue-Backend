@@ -11,9 +11,9 @@ import autorescue.dto.SendNotificationRequest;
 
 public interface AutorescueService {
 
-	void sendNotification(SendNotificationRequest request);
+	ResponseEntity<Object> sendNotification(SendNotificationRequest request);
 
-	void needHelp(SendNotificationRequest request) throws Exception;
+	ResponseEntity<Object> needHelp(SendNotificationRequest request) throws Exception;
 
 	ResponseEntity<Object> sendForm(SendFormRequest request) throws Exception;
 }

@@ -23,13 +23,13 @@ public class AutorescueController {
 	private final AutorescueService autorescueService;
 
 	@PostMapping("/deviceStatus")
-	public void sendNotification(@RequestBody SendNotificationRequest request) {
-		autorescueService.sendNotification(request);
+	public ResponseEntity<Object> sendNotification(@RequestBody SendNotificationRequest request) {
+		return autorescueService.sendNotification(request);
 	}
 
 	@PostMapping("/needHelp")
-	public void needHelp(@RequestBody SendNotificationRequest request) throws Exception {
-		autorescueService.needHelp(request);
+	public ResponseEntity<Object> needHelp(@RequestBody SendNotificationRequest request) throws Exception {
+		return autorescueService.needHelp(request);
 	}
 
 	@PostMapping("/sendForm")

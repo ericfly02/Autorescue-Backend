@@ -34,7 +34,7 @@ public class AutorescueServiceImpl implements AutorescueService {
 	private final NokiaClient nokiaClient;
 
 	@Override
-	public void sendNotification(SendNotificationRequest request) {
+	public ResponseEntity<Object> sendNotification(SendNotificationRequest request) {
 
 		Optional<Autorescue> autorescueOpt = autorescueRepository.findBySerialNumber(request.getSerialNumber());
 		if (autorescueOpt.isPresent()) {
@@ -42,13 +42,16 @@ public class AutorescueServiceImpl implements AutorescueService {
 			String phone = autorescue.getPhone();
 			if (getDeviceStatus(phone)) {
 				// Enviamos un evento al móvil para abrir el formulario
-				System.out.println("SEND NOTIFICATION");
+				System.out.println("OPEN FORM");
+				return new ResponseEntity<>(HttpStatus.OK);
 			}
+			return new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE);
 		}
+		return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 	}
 
 	@Override
-	public void needHelp(SendNotificationRequest request) throws Exception {
+	public ResponseEntity<Object> needHelp(SendNotificationRequest request) throws Exception {
 		Optional<Autorescue> autorescueOpt = autorescueRepository.findBySerialNumber(request.getSerialNumber());
 		if (autorescueOpt.isPresent()) {
 			Autorescue autorescue = autorescueOpt.get();
@@ -57,7 +60,9 @@ public class AutorescueServiceImpl implements AutorescueService {
 			// Llamamos a los servicios de emergencia con la información de localización
 			// obtenida
 			System.out.println("CALL EMERGENCY PHONE");
+			return new ResponseEntity<>(HttpStatus.OK);
 		}
+		return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 	}
 
 	@Override
