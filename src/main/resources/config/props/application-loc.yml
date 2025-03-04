@@ -2,7 +2,7 @@ application:
   id: autorescue
   version: 1.0.0
   defaultLanguage: ca_ES
-  domain: http://localhost:5173
+  domain: http://localhost:8080
   domainCookie: localhost
   securityFlag: false
 
